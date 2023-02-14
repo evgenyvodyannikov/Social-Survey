@@ -33,7 +33,7 @@ export class Quizy extends Component {
   }
 
   async fetchQuestions() {
-    const response = await fetch('questions');
+    const response = await fetch('api/questions/getAll');
     const data = await response.json();
     this.setState({ questions: data, loading: false });
   }
